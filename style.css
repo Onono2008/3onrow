@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #525252;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.tablero {
+    display: grid;
+    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: repeat(7, 80px);
+    gap: 10px;
+}
+
+.fila {
+    display: flex;
+}
+
+.celda {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%; /* Bordes curvos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.celda:hover {
+    background-color: #f1c4c0; /* Color pastel al pasar el ratón */
+}
+
+.celda[data-player="1"] {
+    background-color: #f28b82; /* Color pastel para jugador 1 */
+}
+
+.celda[data-player="2"] {
+    background-color: #aecbfa; /* Color pastel para jugador 2 */
+}
